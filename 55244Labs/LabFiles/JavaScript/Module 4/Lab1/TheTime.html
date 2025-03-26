@@ -7,7 +7,9 @@
         <h2>The Time</h2>
 
         The current time is <span id="currentTime"> <i>time goes here!</i> </span><br>
-
+        <button onclick="document.getElementById('currentTime').textContent = new Date().toLocaleTimeString();">
+        Update Time
+        </button>
         <script>
 
         </script>

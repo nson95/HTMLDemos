@@ -12,8 +12,22 @@ Enter a state (OH, IN, NY, CA, FL):
         let region = "unknown";
 
         // add your if logic here...
+        if (code=="OH") {
+            region = "Central"
+        }
+        else if (code=="IN") {
+            region = "Central"
+        }
+        else if (code=="NY") {
+            region = "Northeast"
+        }
+        else if (code=="CA") {
+            region = "West"
+        }
+        else if (code=="FL") {
+            region = "Southeast"
+        }
 
 
-        alert("State " + code + " is in the " + region + " region.");
     }
 </script>

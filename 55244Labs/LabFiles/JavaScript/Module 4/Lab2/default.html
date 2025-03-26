@@ -45,6 +45,31 @@
   </footer>
 
 <!-- Script blocks for LAB 2 go here -->
+  <script>
+    var styletext = "@keyframes flyaway {  \n\
+        0% {  \n\
+            transition: 5s ease-in;  \n\
+          }  \n\
+          100% {  \n\
+            transform: translate(350px, 100px); \n\
+          }  \n\
+        }  \n\
+        \n\
+        #airplane1 {  \n\
+          animation: flyaway 10s ease-in forwards;  \n\
+          -moz-animation-iteration-count: 1;  \n\
+          animation-iteration-count: 1;   \n\
+        }  \n\
+          ";
+          var newStyleBlock = document.createElement("style");
+          var airplane = document.getElementById("airplane1");
+          newStyleBlock.textContent = styletext;
+          document.head.appendChild(newStyleBlock);
+          airplane.addEventListener("animationend", 
+          function(e) { airplane.style.display= "none" }, false);
+          console.log("All done");
+  
+  </script>
 
 </body>
 </html>

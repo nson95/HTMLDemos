@@ -27,14 +27,14 @@ for (var index = 0; index < tabs.length; index++) {
 
 function ShowPopup(tab)
 {
-    // get the popup div and position it
+  
     var popdiv = document.getElementById("menumessage");
-    popdiv.style.left = "30px";
-    popdiv.style.top = "110px";
+    popdiv.style.left = tab.offsetLeft + "px";
+popdiv.style.top = (tab.offsetTop + 30) + "px";
+
     popdiv.style.left = tab.offsetLeft + "px";
     popdiv.style.top = (tab.offsetTop + 30) + "px";
 
-    // select the text to display
     var popuptext = "";
     switch (tab.textContent) {
         case "Home":
@@ -45,6 +45,9 @@ function ShowPopup(tab)
             break;
         case "Sports":
             popuptext = "See our new line of sporting goods!";
+            break;
+            case "More Information":
+            popuptext = "Hi, here is more information";
             break;
         default:
             popuptext = "";
